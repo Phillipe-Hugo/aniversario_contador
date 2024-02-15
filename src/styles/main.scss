@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero {
+  background-image: url(../image/2560x1440-abstract-waving-4k_1620165379.jpg);
+  width: 100%;
+  height: 90vh;
+  padding-top: 64px;
+  padding-bottom: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    position: relative;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+  }
+
+  p {
+    line-height: 56px;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    margin: 64px 0;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.event {
+  background-color: black;
+
+  padding: 50px;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  .container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+  }
+
+  &__bg01 {
+    background-image: linear-gradient(140deg, red, blue);
+  }
+
+  &__bg02 {
+    background-image: linear-gradient(-140deg, blue, red);
+   
+  }
+  .event_text {
+    padding: 40px;
+
+    h2 {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .event {
+    img {
+      width: 100%;
+    }
+    padding: 20px;
+    .container {
+      display: block;
+
+      .event_text {
+        padding: 10px 0;
+
+        h2 {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
